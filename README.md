@@ -1,6 +1,6 @@
-### My Portfolio
+# My Portfolio
 www.seitafujiwara.com
 
 
-# Environment
+## Environment
 
