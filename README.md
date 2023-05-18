@@ -9,5 +9,5 @@ www.seitafujiwara.com
 ・HTML/CSS
 ・Javascript
 
-## Authors
+## Author
 Seita Fujiwara 2023
