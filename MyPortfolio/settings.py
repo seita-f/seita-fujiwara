@@ -13,33 +13,29 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 from django.core.management.utils import get_random_secret_key
-from decouple import config   # .env file
-
+# from decouple import config   # .env file
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')  # path for templates directory
 STATIC_DIR = os.path.join(BASE_DIR, 'static')        # path for static directory
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = config('SECRET_KEY')
-SECRET_KEY = get_random_secret_key()  # generate in production env
+# SECRET_KEY = get_random_secret_key()  # generate in production env
+
+SECRET_KEY = '5%xnt$v#wjhp9#@65p^ckoiyn5bv9+wwni&@a+6@kzs@fuf3yc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = config("DEBUG", cast=bool)
-DEBUG = False
+DEBUG = True
 
-# ALLOWED_HOSTS = [] # Local
-ALLOWED_HOSTS = ['seitafujiwara.com', 'www.seitafujiwara.com',
-                 '.pythonanywhere.com', 'seitafujiwara.pythonanywhere.com'] # DEPLOY
-
-# Avoid sending cookie
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
+ALLOWED_HOSTS = [] # Local
+# ALLOWED_HOSTS = ['seitafujiwara.com', 'www.seitafujiwara.com',
+#                 '.pythonanywhere.com', 'seitafujiwara.pythonanywhere.com'] # DEPLOY
 
 # Application definition
 
@@ -153,8 +149,10 @@ STATICFILES_DIRS = [
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = config('EMAIL_ADDRESS')
-EMAIL_HOST_PASSWORD = config('EMAIL_PASSWORD')
+# EMAIL_HOST_USER = config('EMAIL_ADDRESS')
+EMAIL_HOST_USER = 'seitafujiwara.com'
+# EMAIL_HOST_PASSWORD = config('EMAIL_PASSWORD')
+EMAIL_HOST_PASSWORD = 'sajllcrslkosdeah'
 
 # run local_settings.py in testing env
 try:

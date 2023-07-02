@@ -2,7 +2,11 @@ body{
   background-color   : #111111;
   color              : #ced1d3;
   font-family        : 'custom_font', sans-serif;
+  margin-left        : 7%;
+  margin-right       : 7%;
 }
+
+
 a{ text-decoration   : none; }
 /****************************
     Loading Animation
@@ -44,9 +48,15 @@ span {
   color              : #5AFF19;
 }
 p{
-    font-size        : 18px;
     line-height      : 1.7;
 }
+
+@media screen and (max-width: 1300px) {
+    p{
+       font-size: 30px;
+    }
+}
+
 /*** <p> and </p>  ***/
 .p_tag{
     font-size        : 15px;
@@ -250,6 +260,7 @@ p{
 .pc-nav ul li a:hover{
   color               : #5AFF19;
 }
+
 h1{
   padding             : 0;
   font-size           : 20px;
@@ -257,11 +268,11 @@ h1{
 }
 
 /*** Seita Fujiwara ***/
-#name{
+.name{
   font-size           : 70px;
 }
-/*** I'm a 3rd year student .... ***/
-#hook{
+/*** I'm a Django Developer ***/
+.hook{
   font-size           : 70px;
 }
 /* blink | */
@@ -269,6 +280,18 @@ h1{
   animation           : blink 1s infinite;
   color               : #ced1d3;
 }
+
+/* responsive */
+@media screen and (max-width: 850px) {
+	.name{
+      font-size       : 60px;
+    }
+    .hook{
+      font-size       : 60px;
+    }
+}
+
+
 /*** responsive ***/
 @keyframes blink {
   50% {
@@ -331,7 +354,8 @@ a.btn-border:hover {
 }
 
 /* responsive */
-@media screen and (max-width: 767px) {
+/* change 767 => 850 */
+@media screen and (max-width: 850px) {
 	.items {
 		flex-direction: column;
 	}
@@ -367,10 +391,18 @@ a.btn-border:hover {
   margin               : auto;
   text-align           : center;
 }
+
+/* Desktop */
 #pic{
   width                : 300px;
   height               : 300px;
 }
+/* responsive */
+/* Laptop - Mobile phone */
+
+
+
+
 /*-------------------
       My Project
 --------------------*/
