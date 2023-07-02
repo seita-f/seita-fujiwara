@@ -16,6 +16,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> <!-- slider -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 　　<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">　
@@ -98,9 +100,11 @@
                             <div class="item-body">
                                 <h1>My Portfolio Website</h1>
                                 <div class="item-body-left">
-                                    <p>This is the newest project I've made. I am inspired by a couple of engineers websites and tried to build my own website. Especially I focused on design and animation stuff so that visitors don't get bored :) </p>
-                                    <p><i class="fas fa-hammer"></i>&nbsp;HTML, CSS, JavaScript, Python, Django</p>
-                                    <p><i class="fab fa-github"></i>&nbsp;<a href="" class="link">Github</a></p>
+                                    <p>This is the newest project I've made. I was inspired by a few website made by different engineers
+                                    and based on them I tried to build my own website. I focused especially on design and animation to
+                                    make the site more interesting for visitors. </p>
+                                    <p><i class="fas fa-hammer"></i>&nbsp;HTML/CSS, JavaScript, Python, Django</p>
+                                    <p><i class="fab fa-github"></i>&nbsp;<a href="https://github.com/seita-f/seita-fujiwara" class="link">Github</a></p>
                                 </div>
                                 <button class="close-button">Close</button>
                             </div>
@@ -120,9 +124,11 @@
                                 <!-- wrapper -->
                                 <div class="swiper-wrapper">
                                 <!-- slider -->
-                                <div class="swiper-slide"><img src="{% static 'image/work2-1.png' %}"></div>
-                                <div class="swiper-slide"><img src="{% static 'image/work2-2.png' %}"></div>
-                                <div class="swiper-slide"><img src="{% static 'image/work2-3.png' %}"></div>
+                                <div class="swiper-slide"><img src="{% static 'image/work5-5.png' %}"></div>
+                                <div class="swiper-slide"><img src="{% static 'image/work5-1.png' %}"></div>
+                                <div class="swiper-slide"><img src="{% static 'image/work5-2.png' %}"></div>
+                                <div class="swiper-slide"><img src="{% static 'image/work5-3.png' %}"></div>
+                                <div class="swiper-slide"><img src="{% static 'image/work5-4.png' %}"></div>
                                 </div>
                                 <!-- Page nation -->
                                 <div class="swiper-pagination"></div>
@@ -134,11 +140,13 @@
                         </div><!--/.item -->
                         <div class="item">
                             <div class="item-body">
-                                <h1>Work Out Record</h1>
+                                <h1>Accounting App</h1>
                                 <div class="item-body-left">
-                                    <p>CRUD app. Each user has his own account and can save his work out records. Its record is visible as a graph by using chart.js library.</p>
-                                    <p><i class="fas fa-hammer"></i>&nbsp;HTML, CSS, JavaScript, MySQL, PHP, Symfony</p>
-                                    <p><i class="fab fa-github"></i>&nbsp;<a href="https://github.com/seita-django/Symfony_WorkOut" class="link">Github</a></p>
+                                    <p>Accounting CRUD app that each user can have his own account and can save his expense records.
+                                       Beside that, those data can be editable and deletable. User can also add/delete category.
+                                       Userpage is protected by unique URL.</p>
+                                    <p><i class="fas fa-hammer"></i>&nbsp;Django, Python, Docker, Bootstrap, Chart.js</p>
+                                    <p><i class="fab fa-github"></i>&nbsp;<a href="https://github.com/seita-f/Cloud-Accounting-App" class="link">Github</a></p>
                                 </div>
                                 <button class="close-button">Close</button>
                             </div>
@@ -174,9 +182,10 @@
                             <div class="item-body">
                                 <h1>Wheather App</h1>
                                 <div class="item-body-left">
-                                    <p>API app. User can input city's name and weather of its city is displayed (used API in python). If its city is not exist, then error message returned. Default city is Warsaw.</p>
+                                    <p>API app. User can input a name of city in order to display the weather report for it. (used API in python).
+                                    If the city does not exist, then an error message is returned. The default city is Warsaw.</p>
                                     <p><i class="fas fa-hammer"></i>&nbsp;HTML, CSS, API, Python, Django</p>
-                                    <p><i class="fab fa-github"></i>&nbsp;<a href="https://github.com/seita-django/MyAPI_1" class="link">Github</a></p>
+                                    <p><i class="fab fa-github"></i>&nbsp;<a href="https://github.com/seita-f/weather-app" class="link">Github</a></p>
                                 </div>
                                 <button class="close-button">Close</button>
                             </div>
@@ -214,9 +223,11 @@
                             <div class="item-body">
                                 <h1>My First App</h1>
                                 <div class="item-body-left">
-                                    <p>User can input his/her profile picture, information for resume. In addition to that, user can input info for education, work experience, and contacts as many as they want.</p>
+                                    <p>User can input their profile picture and resume information such as education,
+                                    work experience, and contact.
+                                    </p>
                                     <p><i class="fas fa-hammer"></i>&nbsp;HTML, CSS, Python, Django</p>
-                                    <p><i class="fab fa-github"></i>&nbsp;<a href=https://github.com/seita-django/portfolio_web class="link">Github</a></p>
+                                    <p><i class="fab fa-github"></i>&nbsp;<a href="https://github.com/seita-f/portfolio-app" class="link">Github</a></p>
                                 </div>
                                 <button class="close-button">Close</button>
                             </div>
@@ -230,19 +241,20 @@
             ------------------>
             <p><span class="p_tag">&lt;p&gt;&nbsp;</span><span>Hi my name is</span><span class="p_tag">&nbsp;&lt;/p&gt;</span></p>
             <h3><span class="h3_tag">&lt;h1&gt;&nbsp;</span></h3>
-            <h1 id="name">Seita Fujiwara.</h1>
-            <h1 id="hook">I am Django Developer<span class="blink">|</span></h1>
+
+            <h1 class="name">Seita Fujiwara.</h1>
+            <h1 class="hook">I am Django Developer<span class="blink">|</span></h1>
             <h3><span class="h3_tag">&lt;/h1&gt;&nbsp;</span></h3>
+
             <div class="items">
                 <div class="item">
-                    <p><span class="p_tag">&lt;p&gt;&nbsp;</span>I’m a 3rd year student in computer science who is interested in the full-stack software development and data analysis.
+                    <p><span class="p_tag">&lt;p&gt;&nbsp;</span>I’m a 3rd year computer science student
+                    who is interested in the full stack software development and data analysis.
                         Currently, I’m focused on building a web app with Django framework.<span class="p_tag">&lt;/p&gt;&nbsp;</span>
                     </p>
                 </div><!--/.item-->
                 <div class="item">
-                    <div class="item-body item-body-center">
-                        <h1><a href="{% static 'SeitaFujiwara.pdf' %}" download class="btn btn-border">&lt;/&gt;&nbsp;Download My CV</a></h1>
-                    </div>
+                    <h1 id="pdf_btn"><a href="{% static 'SeitaFujiwara.pdf' %}" download class="btn btn-border">&lt;/&gt;&nbsp;Download My CV</a></h1>
                 </div><!--/.item-->
                 <!-- Jump to About Me -->
                 <a id="About_Me"></a>
@@ -264,10 +276,12 @@
             <div class="items scroll_up">
                 <div class="item">
                     <div class="item-body">
-                        <p><span class="p_tag">&lt;p&gt;&nbsp;</span>Hi! My name is Seita :) I am a Computer Science student with experience doing some web app project in Django and Symfony
-                            and aquired all these knowledge by self-learning. Currenly I am so intrested in data analysis and web develop and really enjoy coding!
-                            Looking for a role where I can grow and learn more from experienced team members and perfome better and better.
-                            Also, I join the algorithm competition called <a href="https://atcoder.jp/users/Seita_Fujiwara?lang=en" class="link" style="color:#5AFF19;">AtCoder</a> from time to time for fun.<span class="p_tag">&lt;/p&gt;&nbsp;</span>
+                        <p><span class="p_tag">&lt;p&gt;&nbsp;</span>Hi! My name is Seita :) I am a computer science student
+                        with experience in making web app project in Django and Symfony.
+                            I acquired all the knowledge in this area by self-learning. I am currently very intrested in data analysis
+                            and web development and I really enjoy coding!
+                            Looking for a role in which I can learn more from experienced team members, grow my skill set and perfome better.
+                            <span class="p_tag">&lt;/p&gt;&nbsp;</span>
                         </p>
                     </div>
                 </div><!--/.item-->
@@ -297,32 +311,33 @@
             </div><!--/.items-->
         </div><!--/.main_part-->
 
-        <!-- Project Part -->
-        <div class="scroll_up">
-            <div class="parent">
-                <!-- overlay -->
-                <div class="overlay"></div>
-                <div class="div1 work_pic">
-                    <img src="{% static 'image/work1-1.png' %}" alt="pic" class="modal-trigger">
-                    <p>My Portfolio</p>
+        <div class="project_resp">
+            <!-- Project Part -->
+            <div class="scroll_up">
+                <div class="parent">
+                    <!-- overlay -->
+                    <div class="overlay"></div>
+                    <div class="div1 work_pic">
+                        <img src="{% static 'image/work1-1.png' %}" alt="pic" class="modal-trigger">
+                        <p>My Portfolio</p>
+                    </div>
+                    <div class="div2 work_pic">
+                        <img src="{% static 'image/work5-5.png' %}" alt="pic" class="modal-trigger">
+                        <p>Accounting App (Latest)</p>
+                    </div>
+                    <div class="div3 work_pic">
+                        <img src="{% static 'image/work3-1.png' %}" alt="pic" class="modal-trigger">
+                        <p>Wheather App</p>
+                    </div>
+                    <div class="div4 work_pic">
+                        <img src="{% static 'image/work4-1.png' %}" alt="pic" class="modal-trigger">
+                        <p>My First App</p>
+                    </div>
                 </div>
-                <div class="div2 work_pic">
-                    <img src="{% static 'image/work2-1.png' %}" alt="pic" class="modal-trigger">
-                    <p>Work Out Record</p>
-                </div>
-                <div class="div3 work_pic">
-                    <img src="{% static 'image/work3-1.png' %}" alt="pic" class="modal-trigger">
-                    <p>Wheather App</p>
-                </div>
-                <div class="div4 work_pic">
-                    <img src="{% static 'image/work4-1.png' %}" alt="pic" class="modal-trigger">
-                    <p>My First App</p>
-                </div>
-            </div>
-        </div><!--/.scroll_up-->
-        <!-- Jump to skill -->
-        <a id="My_Skill"></a>
-
+            </div><!--/.scroll_up-->
+            <!-- Jump to skill -->
+            <a id="My_Skill"></a>
+        </div>
 
         <div class="main_part">
             <!-----------------
@@ -349,7 +364,7 @@
                 <div class="item">
                     <div class="item-body">
                         <p><span class="p_tag">&lt;p&gt;&nbsp;</span>Since I have been working on a couple of projects in Django, I am really familiar with Python, Django, and Web design such as HTML/CSS. In addition to that, I have basic knowledge of MySQL and Linux. As a next step, I'd like to build an ecommerce website which is more complicating<span class="p_tag">&lt;/p&gt;&nbsp;</span></p>
-                        <p>Other skills: C/C++/C#, .NET, Statistics, Github, Symfony</p>
+                        <p>Other skills: Docker, C/C++/C# (.NET), Statistics, Github</p>
                     </div>
                 </div><!--/.item-->
             </div><!--/.items-->
@@ -373,8 +388,8 @@
             <div class="items scroll_up">
                 <div class="item">
                     <div class="item-body">
-                        <p><span class="p_tag">&lt;p&gt;&nbsp;</span>Thank you for visiting my website. I hope you get some idea about who I am.
-                            If you have any some comments about this website or about me, please use the form and say hi.<span class="p_tag">&lt;/p&gt;&nbsp;</span></p>
+                        <p><span class="p_tag">&lt;p&gt;&nbsp;</span>Thank you for visiting my website. I hope you get an idea about who I am.
+                            If you have any comments about this website or about me, please use the form and say hi.<span class="p_tag">&lt;/p&gt;&nbsp;</span></p>
                     </div>
                 </div><!--/.item-->
                 <div class="item">
@@ -410,7 +425,7 @@
             <div id="footer">
                 <ul class="follow-me">
                     <li><a href="https://github.com/seita-f"></a></li>
-                    <li><a href="https://www.linkedin.com/in/seita-fujiwara-759068238/"></a></li>
+                    <li><a href="https://www.linkedin.com/in/seita-fujiwara"></a></li>
                     <li><a href="mailto:seitafujiwara@gmail.com"></a></li>
                 </ul>
                 <p>© Seita Fujiwara 2023</p>
