@@ -539,6 +539,19 @@ a.btn-border:hover {
 .swiper:hover img{
   pointer-events    : none;
 }
+
+/*** Skill tags ***/
+.rounded-badge {
+  display: inline-block;
+  background-color: #999999;
+  padding: 7px 15px 7px 15px;
+  margin: 5px;
+  border: 2px solid #999999; /* Set border color to white */
+  border-radius: 50px; /* Half of the badge height to create a circular border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-right: 5px;
+  color: #111111; /* Set text color to white */
+}
 /*--------------
     Contact
 ---------------*/
