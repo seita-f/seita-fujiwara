@@ -10,23 +10,23 @@ import requests
 def home(request):
 
     # Contact
-    if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
-            message = form.cleaned_data['message']
-            recipient_list = ['seitafujiwara@gmail.com']
-            email = EmailMessage(
-                subject='',
-                body=message,
-                from_email=email,
-                to=recipient_list,
-                reply_to=[email]
-            )
-            email.send()
-            return render(request, 'home.html')
-    else:
-        form = ContactForm()
-
-    return render(request, "home.html", {'form': form},)
+    # if request.method == 'POST':
+    #     form = ContactForm(request.POST)
+    #     if form.is_valid():
+    #         name = form.cleaned_data['name']
+    #         email = form.cleaned_data['email']
+    #         message = form.cleaned_data['message']
+    #         recipient_list = ['seitafujiwara@gmail.com']
+    #         email = EmailMessage(
+    #             subject='',
+    #             body=message,
+    #             from_email=email,
+    #             to=recipient_list,
+    #             reply_to=[email]
+    #         )
+    #         email.send()
+    #         return render(request, 'home.html')
+    # else:
+    #     form = ContactForm()
+    
+    return render(request, "home.html")
