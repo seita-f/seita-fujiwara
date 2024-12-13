@@ -6,12 +6,15 @@ from django.core.mail import EmailMessage
 from .forms import ContactForm
 import requests
 from .models import Project
-from .models import Profile, Project, Competition
+from .models import Profile, Project, Competition, Company, Experience
 
 
 # Create your views here.
 def home(request):
     profile = Profile.objects.first() 
+    companies = Company.objects.all()
+    # experiences = Experience.objects.all()
+    # tags = Tag.objects.all(),
     projects = Project.objects.all()  
     competitions = Competition.objects.all()  
 
@@ -21,6 +24,7 @@ def home(request):
     
     return render(request, 'home.html', {
         'profile': profile,
+        'company': companies,
         'projects': projects,
-        'competitions': competitions
+        'competitions': competitions,
     })

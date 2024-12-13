@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import date
+from taggit.managers import TaggableManager
 
 # Company model
 class Company(models.Model):
@@ -10,7 +11,7 @@ class Company(models.Model):
 
     def __str__(self):
         return self.name
-
+    
 
 # Profile model
 class Profile(models.Model):
@@ -20,20 +21,30 @@ class Profile(models.Model):
     def __str__(self):
         return self.bio
 
+# Tag model
+# class Tag(models.Model):
+#     name = models.CharField(max_length=50, unique=True)  
+
+#     def __str__(self):
+#         return self.name
 
 # Experience model
 class Experience(models.Model):
     company = models.ForeignKey(Company, related_name='experiences', on_delete=models.CASCADE, null=True, blank=True)
     title = models.CharField(max_length=100, default="")
+    tags = TaggableManager(blank=True)  
+    # tags = models.ManyToManyField(Tag, related_name='experience_tag', blank=True)
     description = models.TextField()
 
     def __str__(self):
-        return f"{self.company.name} - {self.position}"
+        return f"{self.company.name} - {self.title}"
 
 
 # Project model
 class Project(models.Model):
     title = models.CharField(max_length=50)
+    # tags = models.ManyToManyField(Tag, related_name='project_tag', blank=True)
+    tags = TaggableManager(blank=True)  
     description = models.TextField()
 
     def __str__(self):
@@ -44,7 +55,7 @@ class Project(models.Model):
 class ProjectImage(models.Model):
     project = models.ForeignKey(Project, related_name='images', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='project_images/')
-
+    
     def __str__(self):
         return f"Image for {self.project.title}"
 
