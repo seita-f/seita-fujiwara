@@ -1,0 +1,46 @@
+html, body {
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%; 
+    background-color: #111111 !important; 
+    color: #ced1d3;
+    font-family: 'custom_font' !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p  {
+    color: #ced1d3 !important;
+  }
+  
+  @font-face {
+    font-family: 'custom_font';
+    src: url("ShareTechMono-Regular.ttf");
+  }
+  
+  a{ text-decoration: none; }
+  
+  .container {
+    margin: 0 auto !important;
+    width: 83% !important;
+    max-width: 1200px;
+  }
+
+  span {
+    color              : #5AFF19;
+  }
+  p{
+      font-size        : 18px;
+      line-height      : 1.7;
+  }
+  /*** <p> and </p>  ***/
+  .p_tag{
+      font-size        : 15px;
+      color            : #808080;
+  }
+  /*** <h3> and </h3> ***/
+  .h3_tag{
+      font-size        : 20px;
+      color            : #808080;
+  }
+  .link{
+      color            : #5AFF19;
+  }

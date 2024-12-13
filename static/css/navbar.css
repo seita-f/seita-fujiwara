@@ -1,0 +1,28 @@
+/***************************************
+   Nav Bar Part 
+***************************************/
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-top: 3%;
+  }
+  .navbar .nav-link {
+    color: #ced1d3; /* ナビゲーションリンクの色 */
+  }
+  
+  .navbar .nav-link:hover {
+    color: #5AFF19; /* ホバー時の色 */
+    font-weight: bold; /* 強調したい場合 */
+  }
+  
+  @media (max-width: 768px) {
+    .navbar .nav-link {
+        text-align: center;
+    }
+  }
+  
+  /* .main-contents{
+    width: 80% !important;
+    margin: 0 auto !important;
+  } */

@@ -5,28 +5,22 @@ import os
 from django.core.mail import EmailMessage
 from .forms import ContactForm
 import requests
+from .models import Project
+from .models import Profile, Project, Competition
+
 
 # Create your views here.
 def home(request):
+    profile = Profile.objects.first() 
+    projects = Project.objects.all()  
+    competitions = Competition.objects.all()  
 
-    # Contact
-    # if request.method == 'POST':
-    #     form = ContactForm(request.POST)
-    #     if form.is_valid():
-    #         name = form.cleaned_data['name']
-    #         email = form.cleaned_data['email']
-    #         message = form.cleaned_data['message']
-    #         recipient_list = ['seitafujiwara@gmail.com']
-    #         email = EmailMessage(
-    #             subject='',
-    #             body=message,
-    #             from_email=email,
-    #             to=recipient_list,
-    #             reply_to=[email]
-    #         )
-    #         email.send()
-    #         return render(request, 'home.html')
-    # else:
-    #     form = ContactForm()
+    # DEBUG:
+    print("DEBUG")
+    print(f"Profile: {profile}")
     
-    return render(request, "home.html")
+    return render(request, 'home.html', {
+        'profile': profile,
+        'projects': projects,
+        'competitions': competitions
+    })

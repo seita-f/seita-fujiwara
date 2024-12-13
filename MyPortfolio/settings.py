@@ -13,12 +13,14 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 from django.core.management.utils import get_random_secret_key
-# from decouple import config   # .env file
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')  # path for templates directory
 STATIC_DIR = os.path.join(BASE_DIR, 'static')        # path for static directory
+
+load_dotenv()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
@@ -27,10 +29,10 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')        # path for static directory
 # SECRET_KEY = config('SECRET_KEY')
 # SECRET_KEY = get_random_secret_key()  # generate in production env
 
-SECRET_KEY = '5%xnt$v#wjhp9#@65p^ckoiyn5bv9+wwni&@a+6@kzs@fuf3yc'
+SECRET_KEY = os.environ["SECRET_KEY"]
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = config("DEBUG", cast=bool)
 DEBUG = True
 
 ALLOWED_HOSTS = [] # Local
@@ -144,15 +146,8 @@ STATICFILES_DIRS = [
 
 # STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')        # path for static directory
-
-# Gmail Address
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = config('EMAIL_ADDRESS')
-EMAIL_HOST_USER = 'seitafujiwara.com'
-# EMAIL_HOST_PASSWORD = config('EMAIL_PASSWORD')
-EMAIL_HOST_PASSWORD = 'sajllcrslkosdeah'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # run local_settings.py in testing env
 try:
