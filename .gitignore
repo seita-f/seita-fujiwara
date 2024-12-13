@@ -3,4 +3,5 @@ local_settings.py
 .env
 **/__pycache__/** 
 myenv
+**/.DS_Store/** 
 
