@@ -1,0 +1,88 @@
+/*********** Tittle **********/
+/* 点滅アニメーション */
+@keyframes blink {
+    0%, 50% {
+        opacity: 1; /* 表示状態 */
+    }
+    51%, 100% {
+        opacity: 0; /* 非表示状態 */
+    }
+}
+
+/* `blank` クラスに点滅アニメーションを適用 */
+.blinking {
+    animation: blink 1.5s infinite; /* 1秒間隔で無限ループ */
+    color: #ced1d3;
+}
+
+/********** About Me **********/
+#About_Me img {
+    max-width: 100%;
+    height: auto;
+    width: 300px; /* デフォルトで横幅を 300px に設定 */
+}
+
+@media (max-width: 768px) { /* モバイル用のスタイル */
+    #About_Me .col-md-4, #About_Me .col-md-8 {
+        margin-top: 4%;
+        text-align: left;
+    }
+    #About_Me img {
+        width: 200px; /* モバイル用に画像サイズを小さく */
+    }
+}
+
+#About_Me .col-md-8 p {
+    margin-top: 4%; /* 説明文の上に20pxの余白を追加 */
+}
+
+.section-title {
+    position: relative;
+    font-size: 2rem; /* タイトルのフォントサイズ */
+    color: #333; /* タイトルの文字色 */
+    text-align: left; /* タイトルを中央揃え */
+    margin-bottom: 1rem; /* 下に余白を設定 */
+  }
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 100%; /* 線を横幅いっぱいに設定 */
+    height: 2px; /* 線の太さ */
+    background-color: #fff; /* 線の色 */
+    margin: 8px auto 4%; /* タイトルとの間隔を調整 */
+}
+
+/* セクション全体の余白を調整（オプション） */
+section {
+    padding-bottom: 2rem; /* セクションの下に余白 */
+}
+
+/********** Experience ***********/
+#Experience .row {
+    /* border-bottom: 1px solid #ddd; */
+    padding-bottom: 20px;
+}
+
+/* Project セクション */
+.project-thumbnail img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.project-thumbnail img:hover {
+    transform: scale(1.05);
+}
+
+/********* tags **********/
+.tag {
+    display: inline-block;
+    background-color: #ced1d3; 
+    color: #222222; 
+    padding: 5px 10px; 
+    margin: 5px; 
+    border-radius: 5px; 
+    font-size: 0.9rem; 
+    text-decoration: none; 
+}
+
+

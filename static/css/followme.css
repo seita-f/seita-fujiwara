@@ -1,0 +1,25 @@
+.follow-me {
+    display: flex; /* 横並びに配置 */
+    justify-content: center; /* 中央揃え */
+    padding: 0; /* リストのデフォルトの余白を削除 */
+    margin: 10% 0 0 0; /* 上下余白を削除 */
+}
+
+.follow-me li {
+    list-style: none; /* リストスタイルを削除 */
+}
+
+.follow-me a {
+    text-decoration: none; 
+    color: white;
+    font-size: 40px; 
+    transition: color 0.3s ease; /
+}
+
+.follow-me a:hover {
+    color: #5AFF19; 
+}
+
+.follow-me li + li {
+    margin-left: 10px; 
+}

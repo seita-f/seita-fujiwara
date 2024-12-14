@@ -21,8 +21,25 @@
         text-align: center;
     }
   }
-  
-  /* .main-contents{
-    width: 80% !important;
-    margin: 0 auto !important;
-  } */
+
+  /* ハンバーガーメニューアイコンのスタイル */
+.navbar-toggler .fa-bars {
+  font-size: 1.5rem; /* アイコンの大きさ */
+  color: #ced1d3; /* アイコンの色 */
+  transition: transform 0.2s ease; /* ホバー時のアニメーション */
+}
+
+/* ホバー時の効果 */
+.navbar-toggler:hover .fa-bars {
+  transform: scale(1.2); /* 少し大きくする */
+  color: #555; /* 色を少し変える */
+}
+
+.navbar-toggler .fa-xmark {
+  background-color: transparent; /* 背景なし */
+}
+
+/* メニューが開いているときのスタイル */
+.navbar-toggler .fa-xmark {
+  color: #ced1d3; /* アイコンの色を黒に */
+}

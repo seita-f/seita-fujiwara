@@ -20,7 +20,7 @@ class ProjectImageInline(admin.TabularInline):
 
 # Project admin
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description', 'tag_list')
+    list_display = ('title', 'description', 'link', 'tag_list',)
     inlines = [ProjectImageInline]  # ProjectImage
 
     def get_queryset(self, request):
@@ -29,11 +29,15 @@ class ProjectAdmin(admin.ModelAdmin):
     def tag_list(self, obj):
         return u", ".join(o.name for o in obj.tags.all())
     
+class CompetitionAdmin(admin.ModelAdmin):
+    list_display = ('title', 'description', 'medal')  # メダルをリスト表示に追加
+    list_filter = ('medal',)  # メダルでフィルタリング可能に
+
 
 # Register models in admin
 admin.site.register(Profile)
 admin.site.register(Company)
 admin.site.register(Experience, ExperienceAdmin)
 admin.site.register(Project, ProjectAdmin)
-admin.site.register(Competition)
+admin.site.register(Competition, CompetitionAdmin)
 

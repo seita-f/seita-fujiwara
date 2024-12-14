@@ -4,9 +4,11 @@
 /***** navbar ******/
 @import url("navbar.css");
 
-/***** navbar ******/
+/***** main contents ******/
 @import url("content.css");
 
-/***** navbar ******/
-@import url("footer.css");
+/***** modal window *****/
+@import url("modal_window.css");
 
+/***** followme icon ******/
+@import url("followme.css");

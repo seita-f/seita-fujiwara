@@ -46,6 +46,7 @@ class Project(models.Model):
     # tags = models.ManyToManyField(Tag, related_name='project_tag', blank=True)
     tags = TaggableManager(blank=True)  
     description = models.TextField()
+    link = models.TextField(blank=True)
 
     def __str__(self):
         return self.title
@@ -64,6 +65,19 @@ class ProjectImage(models.Model):
 class Competition(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
+
+    MEDAL_CHOICES = [
+        ('gold', 'Gold'),
+        ('silver', 'Silver'),
+        ('bronze', 'Bronze'),
+        ('none', 'None'),
+    ]
+
+    medal = models.CharField(
+        max_length=10, 
+        choices=MEDAL_CHOICES, 
+        default='none'
+    )
 
     def __str__(self):
         return self.title
