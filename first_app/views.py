@@ -24,7 +24,7 @@ def home(request):
     
     return render(request, 'home.html', {
         'profile': profile,
-        'company': companies,
+        'companies': companies,
         'projects': projects,
         'competitions': competitions,
     })

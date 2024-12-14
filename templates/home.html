@@ -74,17 +74,61 @@
 
         <section id="Experience">
             <h2>Experience</h2>
-            <p>Details about experience go here.</p>
+            {% if companies %}
+                <!-- company -->
+                {% for company in companies %}
+                    <p>{{ company.name }}</p>
+                    <p>{{ company.position }}</p>
+                    <p>From {{ company.start_date|date:"Y-m" }} to {% if company.end_date %}{{ company.end_date|date:"Y-m" }}{% else %}Current{% endif %}</p>
+                    {% if company.experiences.all %}
+                        <ul>
+                            <!-- experience -->
+                            {% for experience in company.experiences.all %}
+                                <li>
+                                    <p>{{ experience.title }}</p>
+                                    <p>{{ experience.description }}</p>
+                                    <!-- tags -->
+                                    <p>
+                                        {% if experience.tags.all %}
+                                            {{ experience.tags.all|join:", " }}
+                                        {% else %}
+                                            No tags available
+                                        {% endif %}
+                                    </p>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>No experiences available for this company.</p>
+                    {% endif %}
+                {% endfor %}
+            {% else %}
+                <p>No company data available.</p>
+            {% endif %}
         </section>
 
         <section id="Project">
             <h2>Project</h2>
-            <p>Details about projects go here.</p>
+            {% for project in projects %}
+                <div class="project">
+                    <h2>{{ project.title }}</h2>
+                    <p>{{ project.description|safe }}</p>
+                    
+                    <!-- 画像をループで表示 -->
+                    <div class="project-images">
+                        {% for image in project.images.all %}
+                            <img src="{{ image.image.url }}" alt="Image for {{ project.title }}">
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
         </section>
 
         <section id="Competition">
             <h2>Competition</h2>
-            <p>Details about competitions go here.</p>
+            {% for competition in competitions %}
+                <p>{{ competition.title }}: {{ competition.description }}</p>
+            {% endfor %}
         </section>
 
         <!-- <section id="Certification">
