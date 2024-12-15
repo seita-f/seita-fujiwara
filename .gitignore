@@ -1,5 +1,6 @@
 # DB
 db.sqlite3
+.DS_Store
 **/.DS_Store/** 
 **/__pycache__/** 
 
@@ -8,7 +9,7 @@ db.sqlite3
 local_settings.py
 
 # virtual env -> we have requirements.txt
-myenv
+venv
 
 # Media
 **/image/*
