@@ -19,40 +19,13 @@
   </head>
   <body>
     <!-- Navbar -->
-    <!-- <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand">
-                <h2><i class="fa-solid fa-cubes"></i></h2>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i> 
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto gap-5"> 
-                <li class="nav-item">
-                <a class="nav-link" href="#About_Me">About Me</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#Experience">Experience</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#Project">Project</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#Competition">Competition</a>
-                </li>
-            </ul>
-            </div>
-        </div>
-    </nav> -->
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand">
                 <h2><i class="fa-solid fa-cubes"></i></h2>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i> <!-- 初期状態のアイコン -->
+                <i class="fa-solid fa-bars"></i> 
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto gap-5"> 
@@ -89,7 +62,7 @@
             <h2 class="section-title">About Me</h2>
             {% if profile %}
                 <div class="row">
-                    <!-- 左側: 写真 -->
+                    <!-- left: profile picture -->
                     <div class="col-md-4 text-center">
                         {% if profile.profile_picture %}
                             <img src="{{ profile.profile_picture.url }}" alt="Profile Picture" class="img-fluid rounded" style="max-width: 100%; height: auto; width: 300px;">
@@ -98,7 +71,7 @@
                         {% endif %}
                     </div>
                     
-                    <!-- 右側: 説明 -->
+                    <!-- right: introduction -->
                     <div class="col-md-8">
                         <p>{{ profile.bio }}</p>
                         <ul class="follow-me d-flex justify-content-center list-unstyled">
@@ -128,19 +101,20 @@
         <section id="Experience" class="container mb-5 pb-3">
             <h2 class="section-title">Experience</h2>
             {% if companies %}
-                <!-- 各会社ごとにループ -->
+                <!-- loop for each company -->
                 {% for company in companies %}
                     <div class="row mb-4">
-                        <!-- 左側: Company name と Start-End date -->
+                        <!-- left: Company name & Start-End date -->
                         <div class="col-md-4 col-12 mb-2 pb-3">
                             <h5>{{ company.name }}</h5>
                             <p>From {{ company.start_date|date:"Y-m" }} to {% if company.end_date %}{{ company.end_date|date:"Y-m" }}{% else %}Current{% endif %}</p>
                         </div>
                         
-                        <!-- 右側: Experience -->
+                        <!--rigth: Experience -->
                         <div class="col-md-8 col-12">
                             {% if company.experiences.all %}
                                 <ul>
+                                    <!-- loop for experience -->
                                     {% for experience in company.experiences.all %}
                                         <li>
                                             <div class="pb-2">
@@ -172,7 +146,7 @@
             <div class="row">
                 {% for project in projects %}
                     <div class="col-md-6 col-12 mb-4">
-                        <!-- プロジェクト画像（クリックでモーダルを開く） -->
+                        <!-- project pic & open modal window -->
                         <div class="project-thumbnail">
                             {% if project.images.all|length > 0 %}
                                 <img src="{{ project.images.all.0.image.url }}" alt="Project Image" class="img-fluid rounded" data-bs-toggle="modal" data-bs-target="#projectModal-{{ forloop.counter }}">
@@ -184,12 +158,12 @@
                         <h5 class="mt-3 text-center">{{ project.title }}</h5>
                     </div>
         
-                    <!-- モーダルウィンドウ -->
+                    <!-- modal window contents -->
                     <div class="modal fade" id="projectModal-{{ forloop.counter }}" tabindex="-1" aria-labelledby="projectModalLabel-{{ forloop.counter }}" aria-hidden="true">
                         <div class="modal-dialog modal-lg modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-body d-flex flex-column flex-md-row">
-                                    <!-- 左側: 写真ギャラリー -->
+                                    <!-- left: pic gallaly -->
                                     <div class="gallery col-12 col-md-6">
                                         <div id="carousel-{{ forloop.counter }}" class="carousel slide" data-bs-ride="carousel">
                                             <div class="carousel-inner">
@@ -210,7 +184,7 @@
                                         </div>
                                     </div>
 
-                                    <!-- 右側: タイトル、説明、タグ -->
+                                    <!-- right: title, description, tag -->
                                     <div class="details col-12 col-md-6">
                                         <h3 class="modal-title mb-3" id="projectModalLabel-{{ forloop.counter }}">{{ project.title }}</h5>
                                         <p>{{ project.description }}</p>
