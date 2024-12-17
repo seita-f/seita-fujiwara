@@ -91,19 +91,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-"""
-# DEPLOY
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'rozabore_MyPortfolio',
-        'USER': 'rozabore_id_rsa',
-        'PASSWORD': 'Baseball@0615',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
-"""
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -141,17 +129,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+# 開発環境用: プロジェクト内の静的ファイルを探すディレクトリを指定
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
 
-# STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')        # path for static directory
+# 本番環境用: collectstatic で静的ファイルを収集する場所
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# メディアファイル用
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # run local_settings.py in testing env
 try:
     from .local_settings import *
-except:
+except ImportError:
     pass
