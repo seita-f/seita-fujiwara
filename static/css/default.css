@@ -24,6 +24,13 @@ html, body {
     max-width: 1200px;
   }
 
+  @media (max-width: 768px) {
+    .container {
+      width: 93% !important;
+      padding: 0 15px; 
+    }
+  }
+
   span {
     color              : #5AFF19;
   }
