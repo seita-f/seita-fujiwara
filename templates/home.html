@@ -107,6 +107,7 @@
                         <!-- left: Company name & Start-End date -->
                         <div class="col-md-4 col-12 mb-2 pb-3">
                             <h5>{{ company.name }}</h5>
+                            <h4>({{ company.name }})</h4>
                             <p>From {{ company.start_date|date:"Y-m" }} to {% if company.end_date %}{{ company.end_date|date:"Y-m" }}{% else %}Current{% endif %}</p>
                         </div>
                         
@@ -237,6 +238,5 @@
     <!-- JS  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="../static/js/toggle_menu.js"></script>
-    <script src="../static/js/fade_animation.js"></script>
 </body>
 </html>
