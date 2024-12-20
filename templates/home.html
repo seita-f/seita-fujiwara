@@ -107,7 +107,7 @@
                         <!-- left: Company name & Start-End date -->
                         <div class="col-md-4 col-12 mb-2 pb-3">
                             <h5>{{ company.name }}</h5>
-                            <h4>({{ company.name }})</h4>
+                            <h5>({{ company.position }})<h5>
                             <p>From {{ company.start_date|date:"Y-m" }} to {% if company.end_date %}{{ company.end_date|date:"Y-m" }}{% else %}Current{% endif %}</p>
                         </div>
                         
