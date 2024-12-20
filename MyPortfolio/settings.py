@@ -22,13 +22,6 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')        # path for static directory
 
 load_dotenv()
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = config('SECRET_KEY')
-# SECRET_KEY = get_random_secret_key()  # generate in production env
-
 SECRET_KEY = os.environ["SECRET_KEY"]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -36,8 +29,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DEBUG = True
 
 ALLOWED_HOSTS = [] # Local
-# ALLOWED_HOSTS = ['seitafujiwara.com', 'www.seitafujiwara.com',
-#                 '.pythonanywhere.com', 'seitafujiwara.pythonanywhere.com'] # DEPLOY
+
+# DEV
+# ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='').split(',')
 
 # Application definition
 
