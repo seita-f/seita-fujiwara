@@ -1,6 +1,6 @@
 # My Portfolio
 This is my porfolio website. I hope this helps you in getting to know me better :) <br>
-www.seitafujiwara.com
+seitafujiwara.com
 
 ## History
 version|descrption
