@@ -4,9 +4,13 @@ html, body {
     height: 100%; 
     background-color: #222222 !important; 
     color: #ced1d3;
-    font-family: 'custom_font' !important;
+    font-family: 'Roboto', sans-serif; 
   }
   
+  .name, .hook {
+    font-family: 'Orbitron', sans-serif; 
+  }
+
   h1, h2, h3, h4, h5, h6, p  {
     color: #ced1d3 !important;
   }
@@ -44,12 +48,15 @@ html, body {
   .p_tag{
       font-size        : 15px;
       color            : #808080;
+      font-family: 'custom_font' !important; 
   }
   /* <h3> and </h3> */
   .h3_tag{
       font-size        : 20px;
       color            : #808080;
+      font-family: 'custom_font' !important; 
   }
   .link{
       color            : #5AFF19;
+      font-family: 'custom_font' !important; 
   }
