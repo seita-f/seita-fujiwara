@@ -15,8 +15,5 @@ v2.1 | designed by bootstrap & re-factored
 - Nginx, Gunicorn
 - AWS (EC2, Route53, IAM)
 
-## Model structure
-
-
 ## Author
 Seita Fujiwara 2023
