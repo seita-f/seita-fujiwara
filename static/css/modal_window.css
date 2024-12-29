@@ -95,6 +95,12 @@
     color: #333333; /* ホバー時に色を少し薄い黒に変更 */
 }
 
+.modal-description {
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
 /* 矢印の共通スタイル */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
