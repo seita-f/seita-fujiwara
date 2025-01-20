@@ -60,3 +60,15 @@ html, body {
       color            : #5AFF19;
       font-family: 'custom_font' !important; 
   }
+
+/* button.custom-btn.btn-outline-primary {
+  background-color: white;
+  color: #222222;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button.custom-btn.btn-outline-primary:hover {
+  background-color: #5AFF19;
+  color: #222222;
+} */
