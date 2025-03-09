@@ -16,7 +16,7 @@ v2.1 | designed by bootstrap & re-factored
 - Django
 - Bootstrap
 - Nginx, Gunicorn
-- AWS (EC2, Route53, IAM)
+- AWS (EC2, Route53, IAM, CloudWatch, SNS)
 
 ## Author
 Seita Fujiwara 2023
