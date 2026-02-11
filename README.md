@@ -1,6 +1,6 @@
 # My Portfolio
 This is my porfolio website. I hope this helps you in getting to know me better :) <br>
-https://seitafujiwara.com
+https://seitafujiwara.com (Curently stopped instance)
 
 ![Screen Shot 2025-03-08 at 23 00 37](https://github.com/user-attachments/assets/ccffe24f-e1b4-46e3-a323-60f7f4ec4893)
 
